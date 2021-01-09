@@ -1,0 +1,14 @@
+
+{% extends 'base.html' %}
+{% block main %}
+<h2>posts List</h2>
+<a href="{% url 'create_post' %}">Create New post</a>
+<ul>
+
+
+    {% for post in object_list %}
+    <li><a href="{% url 'details_post' post.pk %}">{{ post.title }}</a></li>
+    {% endfor %}
+
+</ul>
+{% endblock main %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block main %}
+  <h2>Post Details</h2>
+  <ul>
+    <li>{{ post.title }}</li>
+    <li>{{ post.author }}</li>
+    <li><p>{{ post.body }}</p></li>
+    <a href="{% url 'update_post' post.pk %}">Update</a>
+    <a href="{% url 'delete_post' post.pk %}">Delete</a>
+
+  </ul>
+{% endblock main %}
